@@ -12,9 +12,8 @@
     	</div>
       <div class="good-cont">
         <ul v-for="(item,ind) in arr">
-          <li @click="checkBtn">
-            <img v-if="clicked[ind]"  v-bind:src="item.selectd" alt="">
-            <img v-else v-bind:src="item.select" alt="">
+          <li @click="checkBtn(ind)">
+            <img ref="imgs" v-bind:src="item.select" alt="">
           </li>
           <li>
             <img v-bind:src="item.img" alt="">
@@ -37,11 +36,13 @@ export default {
   name: 'cart',
   created () {
    this.getData();
+   //console.log(this.$refs)
   },
   data(){
     return{
       arr:null,
-      clicked:[]
+      select:"http://localhost:8081/static/images/xuan.jpg",
+      selectd:"http://localhost:8081/static/images/xz.png"
     }
   },
   methods:{
@@ -53,19 +54,12 @@ export default {
       }).then(function(res)
       {
         this.arr=res.data.goods
-        for(var i=0;i<res.data.goods.length;i++)
-        {
-          this.clicked.push(false)
-        }
       })
     },
-    checkBtn(event)
+    checkBtn(ind)
     {
-      //this.clicked[ind]=!this.clicked[ind]
-      //console.log(this.clicked[ind])
-      event.target.currentSrc="http://localhost:8081/static/images/xuan.jpg"
-      /*event.target.currentSrc=event.target.currentSrc=="http://localhost:8081/static/images/xuan.jpg"?"http://localhost:8081/static/images/xz.png":"http://localhost:8081/static/images/xuan.jpg"*/
-    }
+      this.$refs.imgs[ind].src=this.$refs.imgs[ind].src==this.select?this.selectd:this.select
+    } 
   }
 }
 </script>
