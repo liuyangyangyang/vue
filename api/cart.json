@@ -1,0 +1,44 @@
+{
+	"goods":[
+		{
+			"select":"/static/images/xuan.jpg",
+			"selectd":"/static/images/xz.png",
+			"img":"/static/images/s1.jpg",
+			"product":"韩都衣舍 秋装新款小脚拼接修身显瘦休闲裤",
+			"inform":"颜色:黑色;",
+			"nPrize":101.99,
+			"pPrize":145.70,
+			"count":1
+		},
+		{
+			"select":"/static/images/xuan.jpg",
+			"selectd":"/static/images/xz.png",
+			"img":"/static/images/s2.jpg",
+			"product":"韩都衣舍2017韩版女装春秋新款宽松立领长袖衬衫",
+			"inform":"颜色:绿色;",
+			"nPrize":182.00,
+			"pPrize":128.03,
+			"count":1
+		},
+		{
+			"select":"/static/images/xuan.jpg",
+			"selectd":"/static/images/xz.png",
+			"img":"/static/images/s3.jpg",
+			"product":"韩都衣舍2017新款女装春装新款修身字母印花牛仔裤",
+			"inform":"颜色:蓝色;",
+			"nPrize":139.02,
+			"pPrize":198.60,
+			"count":1
+		},
+		{
+			"select":"/static/images/xuan.jpg",
+			"selectd":"/static/images/xz.png",
+			"img":"/static/images/s4.jpg",
+			"product":"韩都衣舍2017韩版女装春装新款圆领打底套头韩女毛针织衫",
+			"inform":"颜色:米白色;",
+			"nPrize":146.02,
+			"pPrize":208.60,
+			"count":1
+		}
+	]
+}
